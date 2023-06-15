@@ -27,7 +27,7 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_scartasegna', url: 'git@github.com:scartasegna/holamundo-mundose.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_scartasegna', url: 'https://github.com/scartasegna/holamundo-mundose.git']]])
             }
         }
         stage('Build artifact'){
